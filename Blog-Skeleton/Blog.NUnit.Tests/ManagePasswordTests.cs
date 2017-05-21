@@ -41,5 +41,32 @@ namespace Blog.NUnit.Tests
             Assert.AreEqual("Incorrect password.", managePage.ErrorIncorrectPassword.Text);
         }
 
+        [Test]
+        public void ChangePasswordwithInvalidNewPassword()
+        {
+            LoginUser user = AccessExcelData.GetTestData("ChangePasswordwithInvalidNewPassword");
+            LoginPage loginPage = new LoginPage(driver);
+            ManagePasswordPage managePage = new ManagePasswordPage(driver);
+
+            loginPage.NavigateTo();
+            loginPage.FillCredentials(user);
+            managePage.FillSubmitPasswordData(user);
+            Assert.AreEqual("The New password field is required.", managePage.ErrorNewPasswordMissing.Text);
+            Assert.AreEqual("The new password and confirmation password do not match.", managePage.ErrorPasswordsMismatch.Text);
+        }
+
+        [Test]
+        public void ChangePasswordwithoutConfirmedNewPassword()
+        {
+            LoginUser user = AccessExcelData.GetTestData("ChangePasswordwithoutConfirmedNewPassword");
+            LoginPage loginPage = new LoginPage(driver);
+            ManagePasswordPage managePage = new ManagePasswordPage(driver);
+
+            loginPage.NavigateTo();
+            loginPage.FillCredentials(user);
+            managePage.FillSubmitPasswordData(user);
+            Assert.AreEqual("The new password and confirmation password do not match.", managePage.ErrorPasswordsMismatch2.Text);
+        }
+
     }
 }
