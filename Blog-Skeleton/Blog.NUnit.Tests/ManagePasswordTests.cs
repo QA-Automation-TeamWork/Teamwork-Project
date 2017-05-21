@@ -25,7 +25,7 @@ namespace Blog.NUnit.Tests
         [TearDown]
         public void closeSession()
         {
-            this.driver.Quit();
+            //this.driver.Quit();
         }
 
         [Test]

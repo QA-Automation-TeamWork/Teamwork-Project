@@ -59,6 +59,5 @@ D:\MyDocs\Programming\Automation\Teamwork-Project\Blog-Skeleton\Blog.NUnit.Tests
 D:\MyDocs\Programming\Automation\Teamwork-Project\Blog-Skeleton\Blog.NUnit.Tests\bin\Debug\TestStack.Seleno.xml
 D:\MyDocs\Programming\Automation\Teamwork-Project\Blog-Skeleton\Blog.NUnit.Tests\bin\Debug\WebDriver.xml
 D:\MyDocs\Programming\Automation\Teamwork-Project\Blog-Skeleton\Blog.NUnit.Tests\bin\Debug\WebDriver.Support.xml
-D:\MyDocs\Programming\Automation\Teamwork-Project\Blog-Skeleton\Blog.NUnit.Tests\obj\Debug\Blog.NUnit.Tests.csprojResolveAssemblyReference.cache
 D:\MyDocs\Programming\Automation\Teamwork-Project\Blog-Skeleton\Blog.NUnit.Tests\obj\Debug\Blog.NUnit.Tests.dll
 D:\MyDocs\Programming\Automation\Teamwork-Project\Blog-Skeleton\Blog.NUnit.Tests\obj\Debug\Blog.NUnit.Tests.pdb
