@@ -29,10 +29,14 @@ namespace Blog.NUnit.Tests.Pages
 
         }
 
-        public void FillPasswordData()
+        public void FillSubmitPasswordData(LoginUser user)
         {
             UserManagement.Click();
             changePasswordBtn.Click();
+            Type(CurrentPassword, user.CurrentPassword);
+            Type(NewPassword, user.NewPassword);
+            Type(ConfirmPassword, user.ConfirmNewPassword);
+            SubmitPasswordChange.Click();
         }
     }
 }

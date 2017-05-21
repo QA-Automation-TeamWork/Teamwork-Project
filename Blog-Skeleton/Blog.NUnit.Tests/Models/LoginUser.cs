@@ -10,12 +10,19 @@ namespace Blog.NUnit.Tests.Models
     {
         private string username;
         private string password;
+        private string newpassword;
+        private string confirmnewpassword;
+        private string currentpassword;
+
+        public LoginUser() { }
 
         public LoginUser(String username, String password)
         {
             this.username = username;
             this.password = password;
         }
+
+        public string Key { get; set; }
 
         public string Username
         {
@@ -27,6 +34,24 @@ namespace Blog.NUnit.Tests.Models
         {
             get { return password; }
             set { password = value; }
+        }
+
+        public string NewPassword
+        {
+            get { return newpassword; }
+            set { newpassword = value; }
+        }
+
+        public string ConfirmNewPassword
+        {
+            get { return confirmnewpassword; }
+            set { confirmnewpassword = value; }
+        }
+
+        public string CurrentPassword
+        {
+            get { return currentpassword; }
+            set { currentpassword = value; }
         }
     }
 }

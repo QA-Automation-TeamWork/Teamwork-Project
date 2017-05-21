@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AutomationOfDemoQA
+namespace Blog.NUnit.Tests.Models
 {
     public class AccessExcelData
     {
@@ -27,7 +27,7 @@ namespace AutomationOfDemoQA
             using (var connection = new OleDbConnection(TestDataFileConnection()))
             {
                 connection.Open();
-                var query = string.Format("select * from [ManagePassword$] where key = '{0}'", keyName);
+                var query = string.Format("select * from [LoginUser$] where key = '{0}'", keyName);
                 var value = connection.Query<LoginUser>(query).FirstOrDefault();
                 connection.Close();
                 return value;

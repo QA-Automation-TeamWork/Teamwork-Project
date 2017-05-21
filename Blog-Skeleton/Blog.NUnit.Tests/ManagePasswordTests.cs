@@ -28,26 +28,17 @@ namespace Blog.NUnit.Tests
             this.driver.Quit();
         }
 
-        [Test] //demo test
-        public void VerifyMainPage()
+        [Test]
+        public void ChangePasswordwithInvalidCurrentPassword()
         {
-            HomePage homePage = new HomePage(driver);
-            homePage.NavigateTo();
-            Assert.AreEqual("SOFTUNI BLOG", homePage.HeaderTitle.Text);
-
-        }
-
-        [Test] //demo test2
-        public void GotoManagePassWithoutLoggedUser()
-        {
-            LoginUser user = new LoginUser("stoyanski@mail.com", "password");
+            LoginUser user = AccessExcelData.GetTestData("ChangePasswordwithInvalidCurrentPassword");
             LoginPage loginPage = new LoginPage(driver);
             ManagePasswordPage managePage = new ManagePasswordPage(driver);
 
-            managePage.NavigateTo();
+            loginPage.NavigateTo();
             loginPage.FillCredentials(user);
-            managePage.FillPasswordData();
-            Assert.AreEqual("Change password", managePage.SubmitPasswordChange.Text);
+            managePage.FillSubmitPasswordData(user);
+            Assert.AreEqual("Incorrect password.", managePage.ErrorIncorrectPassword.Text);
         }
 
     }

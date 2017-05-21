@@ -1,0 +1,31 @@
+﻿
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is up-to-date with 'origin/master'.
+#
+# Changes to be committed:
+#	modified:   Blog-Skeleton/Blog.NUnit.Tests/ManagePasswordTests.cs
+#	modified:   Blog-Skeleton/Blog.NUnit.Tests/Models/AccessData.cs
+#	modified:   Blog-Skeleton/Blog.NUnit.Tests/Models/LoginUser.cs
+#	modified:   Blog-Skeleton/Blog.NUnit.Tests/Pages/ManagePasswordPage.cs
+#	modified:   Blog-Skeleton/Blog.NUnit.Tests/Pages/ManagePasswordPageMap.cs
+#	modified:   Blog-Skeleton/Blog.NUnit.Tests/TestData/UserData.xlsx
+#	modified:   Blog-Skeleton/Blog.NUnit.Tests/app.config
+#	modified:   Blog-Skeleton/Blog.NUnit.Tests/bin/Debug/Blog.NUnit.Tests.dll
+#	modified:   Blog-Skeleton/Blog.NUnit.Tests/bin/Debug/Blog.NUnit.Tests.dll.config
+#	modified:   Blog-Skeleton/Blog.NUnit.Tests/bin/Debug/Blog.NUnit.Tests.pdb
+#	modified:   Blog-Skeleton/Blog.NUnit.Tests/bin/Debug/nunit_random_seed.tmp
+#	modified:   Blog-Skeleton/Blog.NUnit.Tests/obj/Debug/Blog.NUnit.Tests.csprojResolveAssemblyReference.cache
+#	modified:   Blog-Skeleton/Blog.NUnit.Tests/obj/Debug/Blog.NUnit.Tests.dll
+#	modified:   Blog-Skeleton/Blog.NUnit.Tests/obj/Debug/Blog.NUnit.Tests.pdb
+#	modified:   Blog-Skeleton/Blog/App_Data/aspnet-Blog-20161128123155.mdf
+#	modified:   Blog-Skeleton/Blog/App_Data/aspnet-Blog-20161128123155_log.ldf
+#	modified:   Blog-Skeleton/Blog/bin/Blog.dll
+#	modified:   Blog-Skeleton/Blog/bin/Blog.pdb
+#	modified:   Blog-Skeleton/Blog/bin/nunit_random_seed.tmp
+#	modified:   Blog-Skeleton/Blog/obj/Debug/Blog.dll
+#	modified:   Blog-Skeleton/Blog/obj/Debug/Blog.pdb
+#	modified:   Blog-Skeleton/BlogBuild.v12.suo
+#
+
