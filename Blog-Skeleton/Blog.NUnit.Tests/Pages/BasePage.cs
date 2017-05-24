@@ -43,5 +43,14 @@ namespace Blog.NUnit.Tests.Pages
             element.Clear();
             element.SendKeys(text);
         }
+
+        protected void EnterText(IWebElement element, string text)
+        {
+            element.Clear();
+            if (text != null)
+            {
+                element.SendKeys(text);
+            }
+        }
     }
 }

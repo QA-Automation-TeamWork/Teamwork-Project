@@ -33,5 +33,17 @@ namespace Blog.NUnit.Tests.Models
                 return value;
             }
         }
+
+        public static RegisterUser GetREgData(string keyName)
+        {
+            using (var connection = new OleDbConnection(TestDataFileConnection()))
+            {
+                connection.Open();
+                var query = string.Format("select * from [RegisterUser$] where key = '{0}'", keyName);
+                var value = connection.Query<RegisterUser>(query).FirstOrDefault();
+                connection.Close();
+                return value;
+            }
+        }
     }
 }
