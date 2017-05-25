@@ -27,7 +27,7 @@ namespace Blog.NUnit.Tests.Pages
             Driver.Navigate().GoToUrl(this.URL);
         }
 
-        public void OpenAndFillRegistrationForm(RegisterUser user)
+        public void OpenFillSubmitRegistrationForm(RegisterUser user)
         {
             Driver.Navigate().GoToUrl(this.URL);
             EnterText(Email, user.Email);
@@ -37,5 +37,13 @@ namespace Blog.NUnit.Tests.Pages
             RegisterBtn.Click();
         }
 
+        public void OpenAndFillRegistrationForm(RegisterUser user)
+        {
+            Driver.Navigate().GoToUrl(this.URL);
+            EnterText(Email, user.Email);
+            EnterText(FullName, user.FullName);
+            EnterText(Password, user.Password);
+            EnterText(ConfirmPassword, user.ConfirmPassword);
+        }
     }
 }

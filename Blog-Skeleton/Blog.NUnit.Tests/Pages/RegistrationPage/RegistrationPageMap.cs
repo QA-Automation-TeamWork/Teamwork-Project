@@ -19,11 +19,14 @@ namespace Blog.NUnit.Tests.Pages
 
         public IWebElement RegisterBtn { get { return this.Driver.FindElement(By.XPath("/html/body/div[2]/div/div/form/div[6]/div/input")); } }
 
+        public IWebElement loggOffBtn { get { return this.Driver.FindElement(By.XPath("//*[@id=\"logoutForm\"]/ul/li[3]/a")); } }
+
         // Error Messages
 
         public string errors { get { return this.Driver.FindElement(By.XPath("/html/body/div[2]/div/div/form/div[1]/ul")).Text; } }
 
         public string loggOff { get { return this.Driver.FindElement(By.XPath("//*[@id=\"logoutForm\"]/ul/li[3]/a")).Text; } }
 
+        public string userIdNotFound { get { return this.Driver.FindElement(By.XPath("/html/body/span/h2/i")).Text; } }
     }
 }

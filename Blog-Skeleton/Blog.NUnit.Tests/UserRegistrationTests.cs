@@ -29,7 +29,7 @@ namespace Blog.NUnit.Tests
         {
             RegisterUser user = AccessExcelData.GetRegistrationData(TestContext.CurrentContext.Test.MethodName);
             RegistrationPage registrationPage = new RegistrationPage(driver);
-            registrationPage.OpenAndFillRegistrationForm(user);
+            registrationPage.OpenFillSubmitRegistrationForm(user);
             
             Assert.IsTrue(registrationPage.loggOff.Contains("Log off"));
         }
@@ -55,7 +55,7 @@ namespace Blog.NUnit.Tests
         {
             RegisterUser user = AccessExcelData.GetRegistrationData(TestContext.CurrentContext.Test.MethodName);
             RegistrationPage registrationPage = new RegistrationPage(driver);
-            registrationPage.OpenAndFillRegistrationForm(user);
+            registrationPage.OpenFillSubmitRegistrationForm(user);
             registrationPage.Email.Clear();
             registrationPage.RegisterBtn.Click();
             Assert.IsTrue(registrationPage.errors.Contains(user.ErrorMessage));
@@ -68,7 +68,7 @@ namespace Blog.NUnit.Tests
         {
             RegisterUser user = AccessExcelData.GetRegistrationData(TestContext.CurrentContext.Test.MethodName);
             RegistrationPage registrationPage = new RegistrationPage(driver);
-            registrationPage.OpenAndFillRegistrationForm(user);
+            registrationPage.OpenFillSubmitRegistrationForm(user);
 
             Assert.IsTrue(registrationPage.errors.Contains(user.ErrorMessage));
         }
@@ -80,7 +80,7 @@ namespace Blog.NUnit.Tests
         {
             RegisterUser user = AccessExcelData.GetRegistrationData(TestContext.CurrentContext.Test.MethodName);
             RegistrationPage registrationPage = new RegistrationPage(driver);
-            registrationPage.OpenAndFillRegistrationForm(user);
+            registrationPage.OpenFillSubmitRegistrationForm(user);
 
             Assert.IsTrue(registrationPage.errors.Contains(user.ErrorMessage));
         }
@@ -91,7 +91,7 @@ namespace Blog.NUnit.Tests
         {
             RegisterUser user = AccessExcelData.GetRegistrationData(TestContext.CurrentContext.Test.MethodName);
             RegistrationPage registrationPage = new RegistrationPage(driver);
-            registrationPage.OpenAndFillRegistrationForm(user);
+            registrationPage.OpenFillSubmitRegistrationForm(user);
 
             Assert.IsTrue(registrationPage.errors.Contains(user.ErrorMessage));
         }
@@ -102,7 +102,7 @@ namespace Blog.NUnit.Tests
         {
             RegisterUser user = AccessExcelData.GetRegistrationData(TestContext.CurrentContext.Test.MethodName);
             RegistrationPage registrationPage = new RegistrationPage(driver);
-            registrationPage.OpenAndFillRegistrationForm(user);
+            registrationPage.OpenFillSubmitRegistrationForm(user);
 
             Assert.IsTrue(registrationPage.errors.Contains(user.ErrorMessage));
         }
@@ -113,9 +113,30 @@ namespace Blog.NUnit.Tests
         {
             RegisterUser user = AccessExcelData.GetRegistrationData(TestContext.CurrentContext.Test.MethodName);
             RegistrationPage registrationPage = new RegistrationPage(driver);
-            registrationPage.OpenAndFillRegistrationForm(user);
+            registrationPage.OpenFillSubmitRegistrationForm(user);
 
             Assert.IsTrue(registrationPage.errors.Contains(user.ErrorMessage));
+        }
+
+        [Test]
+        [AuthorAttribute("Manoela")]
+        [Property("RegistrationPage", 2)]
+        public void RegisterWithTheSameEmail()
+        {
+            RegisterUser user = AccessExcelData.GetRegistrationData(TestContext.CurrentContext.Test.MethodName);
+            RegistrationPage registrationPage = new RegistrationPage(driver);
+            string email = user.Email;
+            registrationPage.OpenAndFillRegistrationForm(user);
+            registrationPage.Email.Clear();
+            registrationPage.Email.SendKeys(email);
+            registrationPage.RegisterBtn.Click();
+
+            registrationPage.loggOffBtn.Click();
+            registrationPage.OpenAndFillRegistrationForm(user);
+            registrationPage.Email.Clear();
+            registrationPage.Email.SendKeys(email);
+            registrationPage.RegisterBtn.Click();
+            Assert.AreEqual(user.ErrorMessage,registrationPage.userIdNotFound);
         }
     }
 }
