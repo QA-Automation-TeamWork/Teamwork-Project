@@ -34,7 +34,7 @@ namespace Blog.NUnit.Tests.Models
             }
         }
 
-        public static RegisterUser GetREgData(string keyName)
+        public static RegisterUser GetRegistrationData(string keyName)
         {
             using (var connection = new OleDbConnection(TestDataFileConnection()))
             {

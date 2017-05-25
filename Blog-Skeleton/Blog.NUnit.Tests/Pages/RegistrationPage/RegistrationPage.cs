@@ -27,8 +27,9 @@ namespace Blog.NUnit.Tests.Pages
             Driver.Navigate().GoToUrl(this.URL);
         }
 
-        public void FillRegistrationForm(RegisterUser user)
+        public void OpenAndFillRegistrationForm(RegisterUser user)
         {
+            Driver.Navigate().GoToUrl(this.URL);
             EnterText(Email, user.Email);
             EnterText(FullName, user.FullName);
             EnterText(Password, user.Password);

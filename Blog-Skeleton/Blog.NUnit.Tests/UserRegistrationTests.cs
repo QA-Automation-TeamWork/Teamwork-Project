@@ -27,10 +27,9 @@ namespace Blog.NUnit.Tests
         [Property("RegistrationPage", 1)]
         public void ValidRegistration()
         {
-            RegisterUser user = AccessExcelData.GetREgData("ValidRegistration");
+            RegisterUser user = AccessExcelData.GetRegistrationData(TestContext.CurrentContext.Test.MethodName);
             RegistrationPage registrationPage = new RegistrationPage(driver);
-            registrationPage.NavigateTo();
-            registrationPage.FillRegistrationForm(user);
+            registrationPage.OpenAndFillRegistrationForm(user);
             
             Assert.IsTrue(registrationPage.loggOff.Contains("Log off"));
         }
@@ -54,11 +53,11 @@ namespace Blog.NUnit.Tests
         [Property("RegistrationPage", 2)]
         public void RegisterWithoutEmail()
         {
-            RegisterUser user = AccessExcelData.GetREgData("RegisterWithoutEmail");
+            RegisterUser user = AccessExcelData.GetRegistrationData(TestContext.CurrentContext.Test.MethodName);
             RegistrationPage registrationPage = new RegistrationPage(driver);
-            registrationPage.NavigateTo();
-            registrationPage.FillRegistrationForm(user);
-
+            registrationPage.OpenAndFillRegistrationForm(user);
+            registrationPage.Email.Clear();
+            registrationPage.RegisterBtn.Click();
             Assert.IsTrue(registrationPage.errors.Contains(user.ErrorMessage));
         }
 
@@ -67,10 +66,9 @@ namespace Blog.NUnit.Tests
         [Property("RegistrationPage", 2)]
         public void RegisterWithoutFullName()
         {
-            RegisterUser user = AccessExcelData.GetREgData("RegisterWithoutFullName");
+            RegisterUser user = AccessExcelData.GetRegistrationData(TestContext.CurrentContext.Test.MethodName);
             RegistrationPage registrationPage = new RegistrationPage(driver);
-            registrationPage.NavigateTo();
-            registrationPage.FillRegistrationForm(user);
+            registrationPage.OpenAndFillRegistrationForm(user);
 
             Assert.IsTrue(registrationPage.errors.Contains(user.ErrorMessage));
         }
@@ -80,10 +78,9 @@ namespace Blog.NUnit.Tests
         [Property("RegistrationPage", 2)]
         public void RegisterWithoutPassword()
         {
-            RegisterUser user = AccessExcelData.GetREgData("RegisterWithoutPassword");
+            RegisterUser user = AccessExcelData.GetRegistrationData(TestContext.CurrentContext.Test.MethodName);
             RegistrationPage registrationPage = new RegistrationPage(driver);
-            registrationPage.NavigateTo();
-            registrationPage.FillRegistrationForm(user);
+            registrationPage.OpenAndFillRegistrationForm(user);
 
             Assert.IsTrue(registrationPage.errors.Contains(user.ErrorMessage));
         }
@@ -92,10 +89,9 @@ namespace Blog.NUnit.Tests
         [Property("RegistrationPage", 2)]
         public void RegisterWithoutConfirmPassword()
         {
-            RegisterUser user = AccessExcelData.GetREgData("RegisterWithoutConfirmPassword");
+            RegisterUser user = AccessExcelData.GetRegistrationData(TestContext.CurrentContext.Test.MethodName);
             RegistrationPage registrationPage = new RegistrationPage(driver);
-            registrationPage.NavigateTo();
-            registrationPage.FillRegistrationForm(user);
+            registrationPage.OpenAndFillRegistrationForm(user);
 
             Assert.IsTrue(registrationPage.errors.Contains(user.ErrorMessage));
         }
@@ -104,10 +100,9 @@ namespace Blog.NUnit.Tests
         [Property("RegistrationPage", 2)]
         public void RegisterWithMissMatchedPasswords()
         {
-            RegisterUser user = AccessExcelData.GetREgData("RegisterWithMissMatchedPasswords");
+            RegisterUser user = AccessExcelData.GetRegistrationData(TestContext.CurrentContext.Test.MethodName);
             RegistrationPage registrationPage = new RegistrationPage(driver);
-            registrationPage.NavigateTo();
-            registrationPage.FillRegistrationForm(user);
+            registrationPage.OpenAndFillRegistrationForm(user);
 
             Assert.IsTrue(registrationPage.errors.Contains(user.ErrorMessage));
         }
@@ -116,10 +111,9 @@ namespace Blog.NUnit.Tests
         [Property("RegistrationPage", 2)]
         public void RegisterWithInvalidEmail()
         {
-            RegisterUser user = AccessExcelData.GetREgData("RegisterWithInvalidEmail");
+            RegisterUser user = AccessExcelData.GetRegistrationData(TestContext.CurrentContext.Test.MethodName);
             RegistrationPage registrationPage = new RegistrationPage(driver);
-            registrationPage.NavigateTo();
-            registrationPage.FillRegistrationForm(user);
+            registrationPage.OpenAndFillRegistrationForm(user);
 
             Assert.IsTrue(registrationPage.errors.Contains(user.ErrorMessage));
         }
