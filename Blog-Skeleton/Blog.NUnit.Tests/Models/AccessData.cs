@@ -7,6 +7,7 @@ using System.Data.OleDb;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace Blog.NUnit.Tests.Models
 {
@@ -14,8 +15,9 @@ namespace Blog.NUnit.Tests.Models
     {
         public static string TestDataFileConnection()
         {
-            var path = ConfigurationManager.AppSettings["TestDataSheetPath"];
+            var path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\TestData\");
             var filename = "UserData.xlsx";
+
             var con = string.Format(@"Provider=Microsoft.ACE.OLEDB.12.0;
 		                              Data Source = {0}; 
 		                              Extended Properties=Excel 12.0;", path + filename);

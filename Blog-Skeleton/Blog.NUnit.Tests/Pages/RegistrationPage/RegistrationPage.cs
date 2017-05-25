@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
 using Blog.NUnit.Tests.Models;
+using NUnit.Framework;
 
 namespace Blog.NUnit.Tests.Pages
 {
@@ -44,5 +45,6 @@ namespace Blog.NUnit.Tests.Pages
             EnterText(Password, user.Password);
             EnterText(ConfirmPassword, user.ConfirmPassword);
         }
+
     }
 }

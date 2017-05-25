@@ -28,5 +28,6 @@ namespace Blog.NUnit.Tests.Pages
         public string loggOff { get { return this.Driver.FindElement(By.XPath("//*[@id=\"logoutForm\"]/ul/li[3]/a")).Text; } }
 
         public string userIdNotFound { get { return this.Driver.FindElement(By.XPath("/html/body/span/h2/i")).Text; } }
+
     }
 }
