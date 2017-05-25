@@ -61,16 +61,21 @@ namespace Blog.NUnit.Tests
             Assert.IsTrue(registrationPage.errors.Contains(user.ErrorMessage));
         }
 
+        public void RegisterWithMissingInfo(string testName)
+        {
+            RegisterUser user = AccessExcelData.GetRegistrationData(testName);
+            RegistrationPage registrationPage = new RegistrationPage(driver);
+            registrationPage.OpenFillSubmitRegistrationForm(user);
+
+            Assert.IsTrue(registrationPage.errors.Contains(user.ErrorMessage));
+        }
+
         [Test]
         [AuthorAttribute("Manoela")]
         [Property("RegistrationPage", 2)]
         public void RegisterWithoutFullName()
         {
-            RegisterUser user = AccessExcelData.GetRegistrationData(TestContext.CurrentContext.Test.MethodName);
-            RegistrationPage registrationPage = new RegistrationPage(driver);
-            registrationPage.OpenFillSubmitRegistrationForm(user);
-
-            Assert.IsTrue(registrationPage.errors.Contains(user.ErrorMessage));
+            RegisterWithMissingInfo(TestContext.CurrentContext.Test.MethodName);
         }
 
         [Test]
@@ -78,44 +83,31 @@ namespace Blog.NUnit.Tests
         [Property("RegistrationPage", 2)]
         public void RegisterWithoutPassword()
         {
-            RegisterUser user = AccessExcelData.GetRegistrationData(TestContext.CurrentContext.Test.MethodName);
-            RegistrationPage registrationPage = new RegistrationPage(driver);
-            registrationPage.OpenFillSubmitRegistrationForm(user);
-
-            Assert.IsTrue(registrationPage.errors.Contains(user.ErrorMessage));
+            RegisterWithMissingInfo(TestContext.CurrentContext.Test.MethodName);
         }
+
         [Test]
         [AuthorAttribute("Manoela")]
         [Property("RegistrationPage", 2)]
         public void RegisterWithoutConfirmPassword()
         {
-            RegisterUser user = AccessExcelData.GetRegistrationData(TestContext.CurrentContext.Test.MethodName);
-            RegistrationPage registrationPage = new RegistrationPage(driver);
-            registrationPage.OpenFillSubmitRegistrationForm(user);
-
-            Assert.IsTrue(registrationPage.errors.Contains(user.ErrorMessage));
+            RegisterWithMissingInfo(TestContext.CurrentContext.Test.MethodName);
         }
+
         [Test]
         [AuthorAttribute("Manoela")]
         [Property("RegistrationPage", 2)]
         public void RegisterWithMissMatchedPasswords()
         {
-            RegisterUser user = AccessExcelData.GetRegistrationData(TestContext.CurrentContext.Test.MethodName);
-            RegistrationPage registrationPage = new RegistrationPage(driver);
-            registrationPage.OpenFillSubmitRegistrationForm(user);
-
-            Assert.IsTrue(registrationPage.errors.Contains(user.ErrorMessage));
+            RegisterWithMissingInfo(TestContext.CurrentContext.Test.MethodName);
         }
+
         [Test]
         [AuthorAttribute("Manoela")]
         [Property("RegistrationPage", 2)]
         public void RegisterWithInvalidEmail()
         {
-            RegisterUser user = AccessExcelData.GetRegistrationData(TestContext.CurrentContext.Test.MethodName);
-            RegistrationPage registrationPage = new RegistrationPage(driver);
-            registrationPage.OpenFillSubmitRegistrationForm(user);
-
-            Assert.IsTrue(registrationPage.errors.Contains(user.ErrorMessage));
+            RegisterWithMissingInfo(TestContext.CurrentContext.Test.MethodName);
         }
 
         [Test]
@@ -126,14 +118,12 @@ namespace Blog.NUnit.Tests
             RegisterUser user = AccessExcelData.GetRegistrationData(TestContext.CurrentContext.Test.MethodName);
             RegistrationPage registrationPage = new RegistrationPage(driver);
             string email = user.Email;
-            registrationPage.OpenAndFillRegistrationForm(user);
-            registrationPage.Email.Clear();
+            registrationPage.OpenAndFillRegistrationFormWithoutEmail(user);
             registrationPage.Email.SendKeys(email);
             registrationPage.RegisterBtn.Click();
 
             registrationPage.loggOffBtn.Click();
-            registrationPage.OpenAndFillRegistrationForm(user);
-            registrationPage.Email.Clear();
+            registrationPage.OpenAndFillRegistrationFormWithoutEmail(user);
             registrationPage.Email.SendKeys(email);
             registrationPage.RegisterBtn.Click();
             Assert.AreEqual(user.ErrorMessage,registrationPage.userIdNotFound);

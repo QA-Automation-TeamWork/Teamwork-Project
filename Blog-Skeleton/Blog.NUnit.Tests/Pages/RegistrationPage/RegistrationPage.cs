@@ -37,10 +37,9 @@ namespace Blog.NUnit.Tests.Pages
             RegisterBtn.Click();
         }
 
-        public void OpenAndFillRegistrationForm(RegisterUser user)
+        public void OpenAndFillRegistrationFormWithoutEmail(RegisterUser user)
         {
             Driver.Navigate().GoToUrl(this.URL);
-            EnterText(Email, user.Email);
             EnterText(FullName, user.FullName);
             EnterText(Password, user.Password);
             EnterText(ConfirmPassword, user.ConfirmPassword);
