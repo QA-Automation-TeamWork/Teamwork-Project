@@ -32,3 +32,21 @@ OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate eleme
   -----------^
 
 [2017-05-26T10:18:23] [Passed] ValidRegistration
+[2017-05-26T13:21:51] [Passed] ValidRegistration
+[2017-05-26T13:23:31] [Passed] ValidRegistration
+[2017-05-26T13:24:20] [Passed] RegisterWithoutEmail
+[2017-05-26T13:26:06] [Passed] AllFieldsAreRequiredToRegister
+[2017-05-26T13:26:07] [Passed] RegisterWithInvalidEmail
+[2017-05-26T13:26:08] [Passed] RegisterWithMissMatchedPasswords
+[2017-05-26T13:26:09] [Passed] RegisterWithoutConfirmPassword
+[2017-05-26T13:26:10] [Passed] RegisterWithoutEmail
+[2017-05-26T13:26:11] [Passed] RegisterWithoutFullName
+[2017-05-26T13:26:12] [Passed] RegisterWithoutPassword
+[2017-05-26T13:26:14] [Failed] RegisterWithTheSameEmail
+  Expected string length 40 but was 17. Strings differ at index 0.
+  Expected: "The Email address is already registered."
+  But was:  "UserId not found."
+  -----------^
+
+[2017-05-26T13:26:15] [Passed] ValidRegistration
+[2017-05-26T13:29:01] [Passed] ValidRegistration

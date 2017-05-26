@@ -8,12 +8,22 @@ namespace Blog.NUnit.Tests.Models
 {
     public class RegisterUser
     {
-        public string email;
+        private string email;
 
         public string Email
         {
-            get { return DateTime.Now.Millisecond + this.email; }
-            set { this.email = value; }
+            get { return this.email; }
+            set
+            {
+                if (value != null)
+                {
+                    this.email = DateTime.Now.Millisecond + value;
+                }
+                else
+                {
+                    this.email = string.Empty;
+                }
+            }
         }
 
         public string FullName;
