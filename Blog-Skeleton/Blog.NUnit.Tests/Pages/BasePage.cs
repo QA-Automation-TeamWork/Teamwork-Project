@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Configuration;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
+using Blog.NUnit.Tests.Models;
 
 namespace Blog.NUnit.Tests.Pages
 {

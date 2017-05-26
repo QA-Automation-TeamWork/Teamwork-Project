@@ -1,4 +1,5 @@
-﻿using Blog.NUnit.Tests.Models;
+﻿using Blog.NUnit.Tests.Attributes;
+using Blog.NUnit.Tests.Models;
 using Blog.NUnit.Tests.Pages;
 using Blog.NUnit.Tests.Seleno;
 using NUnit.Framework;
@@ -25,6 +26,7 @@ namespace Blog.NUnit.Tests
         [Test]
         [AuthorAttribute("Manoela")]
         [Property("RegistrationPage", 1)]
+        [LogResultToFileAttribute]
         public void ValidRegistration()
         {
             RegisterUser user = AccessExcelData.GetRegistrationData(TestContext.CurrentContext.Test.MethodName);
@@ -37,6 +39,7 @@ namespace Blog.NUnit.Tests
         [Test]
         [AuthorAttribute("Manoela")]
         [Property("RegistrationPage",1)]
+        [LogResultToFileAttribute]
         public void AllFieldsAreRequiredToRegister()
         {
             RegistrationPage registrationPage = new RegistrationPage(driver);
@@ -51,6 +54,7 @@ namespace Blog.NUnit.Tests
         [Test]
         [AuthorAttribute("Manoela")]
         [Property("RegistrationPage", 2)]
+        [LogResultToFileAttribute]
         public void RegisterWithoutEmail()
         {
             RegisterUser user = AccessExcelData.GetRegistrationData(TestContext.CurrentContext.Test.MethodName);
@@ -73,6 +77,7 @@ namespace Blog.NUnit.Tests
         [Test]
         [AuthorAttribute("Manoela")]
         [Property("RegistrationPage", 2)]
+        [LogResultToFileAttribute]
         public void RegisterWithoutFullName()
         {
             RegisterWithMissingInfo(TestContext.CurrentContext.Test.MethodName);
@@ -81,6 +86,7 @@ namespace Blog.NUnit.Tests
         [Test]
         [AuthorAttribute("Manoela")]
         [Property("RegistrationPage", 2)]
+        [LogResultToFileAttribute]
         public void RegisterWithoutPassword()
         {
             RegisterWithMissingInfo(TestContext.CurrentContext.Test.MethodName);
@@ -89,6 +95,7 @@ namespace Blog.NUnit.Tests
         [Test]
         [AuthorAttribute("Manoela")]
         [Property("RegistrationPage", 2)]
+        [LogResultToFileAttribute]
         public void RegisterWithoutConfirmPassword()
         {
             RegisterWithMissingInfo(TestContext.CurrentContext.Test.MethodName);
@@ -97,6 +104,7 @@ namespace Blog.NUnit.Tests
         [Test]
         [AuthorAttribute("Manoela")]
         [Property("RegistrationPage", 2)]
+        [LogResultToFileAttribute]
         public void RegisterWithMissMatchedPasswords()
         {
             RegisterWithMissingInfo(TestContext.CurrentContext.Test.MethodName);
@@ -105,14 +113,17 @@ namespace Blog.NUnit.Tests
         [Test]
         [AuthorAttribute("Manoela")]
         [Property("RegistrationPage", 2)]
+        [LogResultToFileAttribute]
         public void RegisterWithInvalidEmail()
         {
             RegisterWithMissingInfo(TestContext.CurrentContext.Test.MethodName);
         }
 
+        // This Test fails as it throws a Server Error
         [Test]
         [AuthorAttribute("Manoela")]
         [Property("RegistrationPage", 2)]
+        [LogResultToFileAttribute]
         public void RegisterWithTheSameEmail()
         {
             RegisterUser user = AccessExcelData.GetRegistrationData(TestContext.CurrentContext.Test.MethodName);

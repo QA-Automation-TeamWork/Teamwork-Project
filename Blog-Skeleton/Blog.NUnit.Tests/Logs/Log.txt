@@ -1,0 +1,34 @@
+[2017-05-26T10:13:23] [Failed] ValidRegistration
+OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="logoutForm"]/ul/li[3]/a"}
+  (Session info: chrome=58.0.3029.110)
+  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 10.0.14393 x86_64)
+[2017-05-26T10:14:21] [Failed] RegisterWithTheSameEmail
+OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="logoutForm"]/ul/li[3]/a"}
+  (Session info: chrome=58.0.3029.110)
+  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 10.0.14393 x86_64)
+[2017-05-26T10:14:32] [Failed] ValidRegistration
+OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="logoutForm"]/ul/li[3]/a"}
+  (Session info: chrome=58.0.3029.110)
+  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 10.0.14393 x86_64)
+[2017-05-26T10:15:59] [Passed] ValidRegistration
+[2017-05-26T10:16:38] [Failed] RegisterWithTheSameEmail
+  Expected string length 40 but was 17. Strings differ at index 0.
+  Expected: "The Email address is already registered."
+  But was:  "UserId not found."
+  -----------^
+
+[2017-05-26T10:16:39] [Passed] ValidRegistration
+[2017-05-26T10:18:13] [Passed] AllFieldsAreRequiredToRegister
+[2017-05-26T10:18:14] [Passed] RegisterWithInvalidEmail
+[2017-05-26T10:18:15] [Passed] RegisterWithMissMatchedPasswords
+[2017-05-26T10:18:16] [Passed] RegisterWithoutConfirmPassword
+[2017-05-26T10:18:18] [Passed] RegisterWithoutEmail
+[2017-05-26T10:18:19] [Passed] RegisterWithoutFullName
+[2017-05-26T10:18:19] [Passed] RegisterWithoutPassword
+[2017-05-26T10:18:22] [Failed] RegisterWithTheSameEmail
+  Expected string length 40 but was 17. Strings differ at index 0.
+  Expected: "The Email address is already registered."
+  But was:  "UserId not found."
+  -----------^
+
+[2017-05-26T10:18:23] [Passed] ValidRegistration

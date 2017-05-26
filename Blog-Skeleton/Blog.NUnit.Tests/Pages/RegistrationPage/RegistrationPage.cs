@@ -46,5 +46,6 @@ namespace Blog.NUnit.Tests.Pages
             EnterText(ConfirmPassword, user.ConfirmPassword);
         }
 
+
     }
 }
