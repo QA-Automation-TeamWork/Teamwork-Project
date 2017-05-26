@@ -92,9 +92,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Attributes\LogResultToFileAttribute.cs" />
+    <Compile Include="ManageArticleWithoutLoggedUser.cs" />
     <Compile Include="Models\AccessData.cs" />
     <Compile Include="Models\LoginUser.cs" />
     <Compile Include="Models\RegisterUser.cs" />
+    <Compile Include="Pages\ArticlePage\ArticlePage.cs" />
+    <Compile Include="Pages\ArticlePage\ArticlePageAsserter.cs" />
+    <Compile Include="Pages\ArticlePage\ArticlePageMap.cs" />
     <Compile Include="Pages\BasePage.cs" />
     <Compile Include="Pages\HomePageMap.cs" />
     <Compile Include="Pages\HomePage.cs" />
