@@ -8,7 +8,7 @@ namespace Blog.NUnit.Tests.Models
 {
     public class RegisterUser
     {
-        private string email;
+        public string email;
 
         public string Email
         {

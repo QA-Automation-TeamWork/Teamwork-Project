@@ -123,7 +123,7 @@ namespace Blog.NUnit.Tests
         {
             RegisterUser user = AccessExcelData.GetRegistrationData(TestContext.CurrentContext.Test.MethodName);
             RegistrationPage registrationPage = new RegistrationPage(driver);
-            string email = user.Email;
+            string email = user.email;
             registrationPage.OpenAndFillRegistrationFormWithoutEmail(user);
             registrationPage.Email.SendKeys(email);
             registrationPage.RegisterBtn.Click();
