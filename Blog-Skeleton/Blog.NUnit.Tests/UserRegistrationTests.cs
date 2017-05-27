@@ -57,12 +57,7 @@ namespace Blog.NUnit.Tests
         [LogResultToFileAttribute]
         public void RegisterWithoutEmail()
         {
-            RegisterUser user = AccessExcelData.GetRegistrationData(TestContext.CurrentContext.Test.MethodName);
-            RegistrationPage registrationPage = new RegistrationPage(driver);
-            registrationPage.OpenFillSubmitRegistrationForm(user);
-            registrationPage.Email.Clear();
-            registrationPage.RegisterBtn.Click();
-            Assert.IsTrue(registrationPage.errors.Contains(user.ErrorMessage));
+            RegisterWithMissingInfo(TestContext.CurrentContext.Test.MethodName);
         }
 
         public void RegisterWithMissingInfo(string testName)
