@@ -51,6 +51,20 @@ namespace Blog.NUnit.Tests
             Assert.IsTrue(registrationPage.errors.Contains("The Password field is required."));
         }
 
+        [Test]
+        [AuthorAttribute("Manoela")]
+        [Property("RegistrationPage", 2)]
+        [LogResultToFileAttribute]
+        public void RegisterWithoutEmail()
+        {
+            RegisterUser user = AccessExcelData.GetRegistrationData(TestContext.CurrentContext.Test.MethodName);
+            RegistrationPage registrationPage = new RegistrationPage(driver);
+            registrationPage.OpenFillSubmitRegistrationForm(user);
+            registrationPage.Email.Clear();
+            registrationPage.RegisterBtn.Click();
+            Assert.IsTrue(registrationPage.errors.Contains(user.ErrorMessage));
+        }
+
         public void RegisterWithMissingInfo(string testName)
         {
             RegisterUser user = AccessExcelData.GetRegistrationData(testName);
@@ -58,15 +72,6 @@ namespace Blog.NUnit.Tests
             registrationPage.OpenFillSubmitRegistrationForm(user);
 
             Assert.IsTrue(registrationPage.errors.Contains(user.ErrorMessage));
-        }
-
-        [Test]
-        [AuthorAttribute("Manoela")]
-        [Property("RegistrationPage", 2)]
-        [LogResultToFileAttribute]
-        public void RegisterWithoutEmail()
-        {
-            RegisterWithMissingInfo(TestContext.CurrentContext.Test.MethodName);
         }
 
         [Test]
@@ -123,7 +128,7 @@ namespace Blog.NUnit.Tests
         {
             RegisterUser user = AccessExcelData.GetRegistrationData(TestContext.CurrentContext.Test.MethodName);
             RegistrationPage registrationPage = new RegistrationPage(driver);
-            string email = user.email;
+            string email = user.Email;
             registrationPage.OpenAndFillRegistrationFormWithoutEmail(user);
             registrationPage.Email.SendKeys(email);
             registrationPage.RegisterBtn.Click();

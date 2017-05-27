@@ -32,42 +32,17 @@ OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate eleme
   -----------^
 
 [2017-05-26T10:18:23] [Passed] ValidRegistration
-[2017-05-26T13:21:51] [Passed] ValidRegistration
-[2017-05-26T13:23:31] [Passed] ValidRegistration
-[2017-05-26T13:24:20] [Passed] RegisterWithoutEmail
-[2017-05-26T13:26:06] [Passed] AllFieldsAreRequiredToRegister
-[2017-05-26T13:26:07] [Passed] RegisterWithInvalidEmail
-[2017-05-26T13:26:08] [Passed] RegisterWithMissMatchedPasswords
-[2017-05-26T13:26:09] [Passed] RegisterWithoutConfirmPassword
-[2017-05-26T13:26:10] [Passed] RegisterWithoutEmail
-[2017-05-26T13:26:11] [Passed] RegisterWithoutFullName
-[2017-05-26T13:26:12] [Passed] RegisterWithoutPassword
-[2017-05-26T13:26:14] [Failed] RegisterWithTheSameEmail
+[2017-05-27T08:35:36] [Passed] AllFieldsAreRequiredToRegister
+[2017-05-27T08:35:37] [Passed] RegisterWithInvalidEmail
+[2017-05-27T08:35:38] [Passed] RegisterWithMissMatchedPasswords
+[2017-05-27T08:35:39] [Passed] RegisterWithoutConfirmPassword
+[2017-05-27T08:35:40] [Passed] RegisterWithoutEmail
+[2017-05-27T08:35:41] [Passed] RegisterWithoutFullName
+[2017-05-27T08:35:42] [Passed] RegisterWithoutPassword
+[2017-05-27T08:35:45] [Failed] RegisterWithTheSameEmail
   Expected string length 40 but was 17. Strings differ at index 0.
   Expected: "The Email address is already registered."
   But was:  "UserId not found."
   -----------^
 
-[2017-05-26T13:26:15] [Passed] ValidRegistration
-[2017-05-26T13:29:01] [Passed] ValidRegistration
-[2017-05-26T13:38:18] [Failed] RegisterWithTheSameEmail
-  Expected string length 40 but was 17. Strings differ at index 0.
-  Expected: "The Email address is already registered."
-  But was:  "UserId not found."
-  -----------^
-
-[2017-05-26T17:39:32] [Passed] AllFieldsAreRequiredToRegister
-[2017-05-26T17:39:37] [Passed] RegisterWithInvalidEmail
-[2017-05-26T17:39:42] [Passed] RegisterWithMissMatchedPasswords
-[2017-05-26T17:39:47] [Passed] RegisterWithoutConfirmPassword
-[2017-05-26T17:39:51] [Passed] RegisterWithoutEmail
-[2017-05-26T17:39:57] [Passed] RegisterWithoutFullName
-[2017-05-26T17:40:01] [Passed] RegisterWithoutPassword
-[2017-05-26T17:40:15] [Failed] RegisterWithTheSameEmail
-  Expected string length 40 but was 17. Strings differ at index 0.
-  Expected: "The Email address is already registered."
-  But was:  "UserId not found."
-  -----------^
-
-[2017-05-26T17:40:22] [Passed] ValidRegistration
-[2017-05-26T21:23:14] [Passed] ValidRegistration
+[2017-05-27T08:35:47] [Passed] ValidRegistration

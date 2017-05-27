@@ -93,35 +93,3 @@ D:\QA Automation\Teamwork-Project\Blog-Skeleton\Blog.NUnit.Tests\bin\Debug\WebDr
 D:\QA Automation\Teamwork-Project\Blog-Skeleton\Blog.NUnit.Tests\obj\Debug\Blog.NUnit.Tests.csprojResolveAssemblyReference.cache
 D:\QA Automation\Teamwork-Project\Blog-Skeleton\Blog.NUnit.Tests\obj\Debug\Blog.NUnit.Tests.dll
 D:\QA Automation\Teamwork-Project\Blog-Skeleton\Blog.NUnit.Tests\obj\Debug\Blog.NUnit.Tests.pdb
-C:\Users\EmSiBo\Desktop\Teamwork-Project\Blog-Skeleton\Blog.NUnit.Tests\bin\Debug\Blog.NUnit.Tests.dll.config
-C:\Users\EmSiBo\Desktop\Teamwork-Project\Blog-Skeleton\Blog.NUnit.Tests\bin\Debug\Blog.NUnit.Tests.dll
-C:\Users\EmSiBo\Desktop\Teamwork-Project\Blog-Skeleton\Blog.NUnit.Tests\bin\Debug\Blog.NUnit.Tests.pdb
-C:\Users\EmSiBo\Desktop\Teamwork-Project\Blog-Skeleton\Blog.NUnit.Tests\bin\Debug\Castle.Core.dll
-C:\Users\EmSiBo\Desktop\Teamwork-Project\Blog-Skeleton\Blog.NUnit.Tests\bin\Debug\Dapper.dll
-C:\Users\EmSiBo\Desktop\Teamwork-Project\Blog-Skeleton\Blog.NUnit.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
-C:\Users\EmSiBo\Desktop\Teamwork-Project\Blog-Skeleton\Blog.NUnit.Tests\bin\Debug\nunit.framework.dll
-C:\Users\EmSiBo\Desktop\Teamwork-Project\Blog-Skeleton\Blog.NUnit.Tests\bin\Debug\System.Web.Helpers.dll
-C:\Users\EmSiBo\Desktop\Teamwork-Project\Blog-Skeleton\Blog.NUnit.Tests\bin\Debug\System.Web.Mvc.dll
-C:\Users\EmSiBo\Desktop\Teamwork-Project\Blog-Skeleton\Blog.NUnit.Tests\bin\Debug\System.Web.Razor.dll
-C:\Users\EmSiBo\Desktop\Teamwork-Project\Blog-Skeleton\Blog.NUnit.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
-C:\Users\EmSiBo\Desktop\Teamwork-Project\Blog-Skeleton\Blog.NUnit.Tests\bin\Debug\System.Web.WebPages.dll
-C:\Users\EmSiBo\Desktop\Teamwork-Project\Blog-Skeleton\Blog.NUnit.Tests\bin\Debug\System.Web.WebPages.Razor.dll
-C:\Users\EmSiBo\Desktop\Teamwork-Project\Blog-Skeleton\Blog.NUnit.Tests\bin\Debug\TestStack.Seleno.dll
-C:\Users\EmSiBo\Desktop\Teamwork-Project\Blog-Skeleton\Blog.NUnit.Tests\bin\Debug\WebDriver.dll
-C:\Users\EmSiBo\Desktop\Teamwork-Project\Blog-Skeleton\Blog.NUnit.Tests\bin\Debug\WebDriver.Support.dll
-C:\Users\EmSiBo\Desktop\Teamwork-Project\Blog-Skeleton\Blog.NUnit.Tests\bin\Debug\Castle.Core.xml
-C:\Users\EmSiBo\Desktop\Teamwork-Project\Blog-Skeleton\Blog.NUnit.Tests\bin\Debug\Dapper.xml
-C:\Users\EmSiBo\Desktop\Teamwork-Project\Blog-Skeleton\Blog.NUnit.Tests\bin\Debug\nunit.framework.xml
-C:\Users\EmSiBo\Desktop\Teamwork-Project\Blog-Skeleton\Blog.NUnit.Tests\bin\Debug\System.Web.Helpers.xml
-C:\Users\EmSiBo\Desktop\Teamwork-Project\Blog-Skeleton\Blog.NUnit.Tests\bin\Debug\System.Web.Mvc.xml
-C:\Users\EmSiBo\Desktop\Teamwork-Project\Blog-Skeleton\Blog.NUnit.Tests\bin\Debug\System.Web.Razor.xml
-C:\Users\EmSiBo\Desktop\Teamwork-Project\Blog-Skeleton\Blog.NUnit.Tests\bin\Debug\System.Web.WebPages.xml
-C:\Users\EmSiBo\Desktop\Teamwork-Project\Blog-Skeleton\Blog.NUnit.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
-C:\Users\EmSiBo\Desktop\Teamwork-Project\Blog-Skeleton\Blog.NUnit.Tests\bin\Debug\System.Web.WebPages.Razor.xml
-C:\Users\EmSiBo\Desktop\Teamwork-Project\Blog-Skeleton\Blog.NUnit.Tests\bin\Debug\TestStack.Seleno.pdb
-C:\Users\EmSiBo\Desktop\Teamwork-Project\Blog-Skeleton\Blog.NUnit.Tests\bin\Debug\TestStack.Seleno.xml
-C:\Users\EmSiBo\Desktop\Teamwork-Project\Blog-Skeleton\Blog.NUnit.Tests\bin\Debug\WebDriver.xml
-C:\Users\EmSiBo\Desktop\Teamwork-Project\Blog-Skeleton\Blog.NUnit.Tests\bin\Debug\WebDriver.Support.xml
-C:\Users\EmSiBo\Desktop\Teamwork-Project\Blog-Skeleton\Blog.NUnit.Tests\obj\Debug\Blog.NUnit.Tests.csprojResolveAssemblyReference.cache
-C:\Users\EmSiBo\Desktop\Teamwork-Project\Blog-Skeleton\Blog.NUnit.Tests\obj\Debug\Blog.NUnit.Tests.dll
-C:\Users\EmSiBo\Desktop\Teamwork-Project\Blog-Skeleton\Blog.NUnit.Tests\obj\Debug\Blog.NUnit.Tests.pdb
