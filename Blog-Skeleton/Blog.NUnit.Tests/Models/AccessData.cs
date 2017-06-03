@@ -47,5 +47,17 @@ namespace Blog.NUnit.Tests.Models
                 return value;
             }
         }
+
+        public static BlogArticle GetArticleTestData(string keyName)
+        {
+            using (var connection = new OleDbConnection(TestDataFileConnection()))
+            {
+                connection.Open();
+                var query = string.Format("select * from [Articles$] where key = '{0}'", keyName);
+                var value = connection.Query<BlogArticle>(query).FirstOrDefault();
+                connection.Close();
+                return value;
+            }
+        }
     }
 }
