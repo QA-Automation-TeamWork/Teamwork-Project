@@ -34,5 +34,18 @@ namespace Blog.NUnit.Tests.Pages
             Type(Password, user.Password);
             SubmitLoginBtn.Click();
         }
+
+        public void FillCredentialsWithRememberMe(LoginUser user)
+        {
+            Type(Email, user.Username);
+            Type(Password, user.Password);
+            CheckRememberMe(RememberMeCheck, user.RememberMeCheck);
+            SubmitLoginBtn.Click();
+        }
+
+        public void LogOut()
+        {
+            LogoffButton.Click();
+        }
     }
 }

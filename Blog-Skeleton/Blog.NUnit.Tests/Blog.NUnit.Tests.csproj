@@ -93,6 +93,7 @@
   <ItemGroup>
     <Compile Include="Attributes\LogResultToFileAttribute.cs" />
     <Compile Include="CMSTestsWithLoggedInUser.cs" />
+    <Compile Include="LoginLogoutTests.cs" />
     <Compile Include="ManageArticleWithoutLoggedUserTests.cs" />
     <Compile Include="Models\AccessData.cs" />
     <Compile Include="Models\Article.cs" />
@@ -105,8 +106,8 @@
     <Compile Include="Pages\CMS\CMSPageMapper.cs" />
     <Compile Include="Pages\HomePageMap.cs" />
     <Compile Include="Pages\HomePage.cs" />
-    <Compile Include="Pages\LoginPageMap.cs" />
-    <Compile Include="Pages\LoginPage.cs" />
+    <Compile Include="Pages\LoginLogout\LoginPageMap.cs" />
+    <Compile Include="Pages\LoginLogout\LoginPage.cs" />
     <Compile Include="Pages\ManagePasswordPageMap.cs" />
     <Compile Include="Pages\ManagePasswordPage.cs" />
     <Compile Include="Pages\RegistrationPage\RegistrationPage.cs" />

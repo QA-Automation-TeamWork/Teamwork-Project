@@ -13,6 +13,7 @@ namespace Blog.NUnit.Tests.Models
         private string newpassword;
         private string confirmnewpassword;
         private string currentpassword;
+        private Boolean rememberMeCheck;
 
         public LoginUser() { }
 
@@ -52,6 +53,12 @@ namespace Blog.NUnit.Tests.Models
         {
             get { return currentpassword; }
             set { currentpassword = value; }
+        }
+
+        public Boolean RememberMeCheck
+        {
+            get { return rememberMeCheck; }
+            set { rememberMeCheck = value; }
         }
     }
 }

@@ -53,5 +53,13 @@ namespace Blog.NUnit.Tests.Pages
                 element.SendKeys(text);
             }
         }
+
+        protected void CheckRememberMe(IWebElement element, Boolean value)
+        {
+            if (value.Equals(true))
+            {
+                element.Click();
+            }
+        }
     }
 }
