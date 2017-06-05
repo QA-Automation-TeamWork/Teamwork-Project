@@ -31,6 +31,7 @@ namespace Blog.NUnit.Tests
             LoginPage loginPage = new LoginPage(driver);
 
             loginPage.NavigateTo();
+            loginPage.LogOut();
             loginPage.FillCredentialsWithRememberMe(user);
 
             Assert.AreEqual("Hello user1@abv.bg!", loginPage.LoggedUserMessage.Text);
