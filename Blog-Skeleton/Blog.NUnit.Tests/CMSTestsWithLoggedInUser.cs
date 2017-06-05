@@ -37,7 +37,7 @@ namespace Blog.NUnit.Tests
         [LogResultToFileAttribute]
         public void CMSCreateNewArticleWithValidData()
         {
-            LoginUser user = AccessExcelData.GetTestData("CreateNewArticle");
+            LoginUser user = AccessExcelData.GetTLoginUserData("CreateNewArticle");
             BlogArticle article = AccessExcelData.GetArticleTestData("CreateNewArticleWithValidData");
             LoginPage loginPage = new LoginPage(driver);
             CMSPage cmsPage = new CMSPage(driver);
@@ -57,7 +57,7 @@ namespace Blog.NUnit.Tests
         [LogResultToFileAttribute]
         public void CMSEditExistingArticle()
         {
-            LoginUser user = AccessExcelData.GetTestData("CreateNewArticle");
+            LoginUser user = AccessExcelData.GetTLoginUserData("CreateNewArticle");
             BlogArticle article = AccessExcelData.GetArticleTestData("EditExistingArticle");
             LoginPage loginPage = new LoginPage(driver);
             CMSPage cmsPage = new CMSPage(driver);
@@ -80,7 +80,7 @@ namespace Blog.NUnit.Tests
         [LogResultToFileAttribute]
         public void CMSDeleteExistingArticle()
         {
-            LoginUser user = AccessExcelData.GetTestData("CreateNewArticle");
+            LoginUser user = AccessExcelData.GetTLoginUserData("CreateNewArticle");
             BlogArticle article = AccessExcelData.GetArticleTestData("DeleteExistingArticle");
             LoginPage loginPage = new LoginPage(driver);
             CMSPage cmsPage = new CMSPage(driver);
@@ -104,7 +104,7 @@ namespace Blog.NUnit.Tests
         [LogResultToFileAttribute]
         public void CMSCreateArticleWithoutTitle()
         {
-            LoginUser user = AccessExcelData.GetTestData("CreateNewArticle");
+            LoginUser user = AccessExcelData.GetTLoginUserData("CreateNewArticle");
             BlogArticle article = AccessExcelData.GetArticleTestData("CreateArticleWithoutTitle");
             LoginPage loginPage = new LoginPage(driver);
             CMSPage cmsPage = new CMSPage(driver);
@@ -121,7 +121,7 @@ namespace Blog.NUnit.Tests
         [LogResultToFileAttribute]
         public void CMSNegativeCreateArticleWithoutContent()
         {
-            LoginUser user = AccessExcelData.GetTestData("CreateNewArticle");
+            LoginUser user = AccessExcelData.GetTLoginUserData("CreateNewArticle");
             BlogArticle article = AccessExcelData.GetArticleTestData("CreateArticleWithoutContent");
             LoginPage loginPage = new LoginPage(driver);
             CMSPage cmsPage = new CMSPage(driver);
@@ -138,7 +138,7 @@ namespace Blog.NUnit.Tests
         [LogResultToFileAttribute]
         public void CMSNegativeCreateArticleWithoutTitleAndContent()
         {
-            LoginUser user = AccessExcelData.GetTestData("CreateNewArticle");
+            LoginUser user = AccessExcelData.GetTLoginUserData("CreateNewArticle");
             BlogArticle article = AccessExcelData.GetArticleTestData("CreateArticleWithoutTitleAndContent");
             LoginPage loginPage = new LoginPage(driver);
             CMSPage cmsPage = new CMSPage(driver);
@@ -156,7 +156,7 @@ namespace Blog.NUnit.Tests
         [LogResultToFileAttribute]
         public void CMSCreateArticleWithLongTitle()
         {
-            LoginUser user = AccessExcelData.GetTestData("CreateNewArticle");
+            LoginUser user = AccessExcelData.GetTLoginUserData("CreateNewArticle");
             BlogArticle article = AccessExcelData.GetArticleTestData("CreateArticleWithLongTitle");
             LoginPage loginPage = new LoginPage(driver);
             CMSPage cmsPage = new CMSPage(driver);
@@ -173,7 +173,7 @@ namespace Blog.NUnit.Tests
         [LogResultToFileAttribute]
         public void CMSCreateArticleWithLongTitleAndWithoutContent()
         {
-            LoginUser user = AccessExcelData.GetTestData("CreateNewArticle");
+            LoginUser user = AccessExcelData.GetTLoginUserData("CreateNewArticle");
             BlogArticle article = AccessExcelData.GetArticleTestData("CreateArticleWithLongTitleAndWithoutContent");
             LoginPage loginPage = new LoginPage(driver);
             CMSPage cmsPage = new CMSPage(driver);
@@ -192,7 +192,7 @@ namespace Blog.NUnit.Tests
         [LogResultToFileAttribute]
         public void CMSCreateNewArticleNegativeEditTests()
         {
-            LoginUser user = AccessExcelData.GetTestData("CreateNewArticle");
+            LoginUser user = AccessExcelData.GetTLoginUserData("CreateNewArticle");
             BlogArticle article = AccessExcelData.GetArticleTestData("CreateArticleForNegativeEdit");
             LoginPage loginPage = new LoginPage(driver);
             CMSPage cmsPage = new CMSPage(driver);
@@ -214,7 +214,7 @@ namespace Blog.NUnit.Tests
          * or error during validation, thus the test cannot be executed properly.*/
         public void CMSNegativeEditArticleWithoutContent()
         {
-            LoginUser user = AccessExcelData.GetTestData("CreateNewArticle");
+            LoginUser user = AccessExcelData.GetTLoginUserData("CreateNewArticle");
             BlogArticle article = AccessExcelData.GetArticleTestData("NegativeEditArticleWithoutContent");
             LoginPage loginPage = new LoginPage(driver);
             CMSPage cmsPage = new CMSPage(driver);
@@ -233,7 +233,7 @@ namespace Blog.NUnit.Tests
         [LogResultToFileAttribute]
         public void CMSNegativeEditArticleWithoutTitle()
         {
-            LoginUser user = AccessExcelData.GetTestData("CreateNewArticle");
+            LoginUser user = AccessExcelData.GetTLoginUserData("CreateNewArticle");
             BlogArticle article = AccessExcelData.GetArticleTestData("NegativeEditArticleWithoutTitle");
             LoginPage loginPage = new LoginPage(driver);
             CMSPage cmsPage = new CMSPage(driver);
@@ -252,7 +252,7 @@ namespace Blog.NUnit.Tests
         [LogResultToFileAttribute]
         public void CMSNegativeEditArticleWithLongTitle()
         {
-            LoginUser user = AccessExcelData.GetTestData("CreateNewArticle");
+            LoginUser user = AccessExcelData.GetTLoginUserData("CreateNewArticle");
             BlogArticle article = AccessExcelData.GetArticleTestData("NegativeEditArticleWithLongTitle");
             LoginPage loginPage = new LoginPage(driver);
             CMSPage cmsPage = new CMSPage(driver);

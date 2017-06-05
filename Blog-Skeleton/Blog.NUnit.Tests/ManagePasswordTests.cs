@@ -1,4 +1,5 @@
 ﻿using Blog.NUnit.Tests.Models;
+using Blog.NUnit.Tests.Attributes;
 using Blog.NUnit.Tests.Pages;
 using Blog.NUnit.Tests.Seleno;
 using NUnit.Framework;
@@ -29,9 +30,12 @@ namespace Blog.NUnit.Tests
         }
 
         [Test]
+        [Author("Stoyan")]
+        [Property("ManagePassword", 1)]
+        [LogResultToFileAttribute]
         public void ChangePasswordwithInvalidCurrentPassword()
         {
-            LoginUser user = AccessExcelData.GetTestData("ChangePasswordwithInvalidCurrentPassword");
+            LoginUser user = AccessExcelData.GetTLoginUserData("ChangePasswordwithInvalidCurrentPassword");
             LoginPage loginPage = new LoginPage(driver);
             ManagePasswordPage managePage = new ManagePasswordPage(driver);
 
@@ -42,9 +46,12 @@ namespace Blog.NUnit.Tests
         }
 
         [Test]
+        [Author("Stoyan")]
+        [Property("ManagePassword", 1)]
+        [LogResultToFileAttribute]
         public void ChangePasswordwithInvalidNewPassword()
         {
-            LoginUser user = AccessExcelData.GetTestData("ChangePasswordwithInvalidNewPassword");
+            LoginUser user = AccessExcelData.GetTLoginUserData("ChangePasswordwithInvalidNewPassword");
             LoginPage loginPage = new LoginPage(driver);
             ManagePasswordPage managePage = new ManagePasswordPage(driver);
 
@@ -56,9 +63,12 @@ namespace Blog.NUnit.Tests
         }
 
         [Test]
+        [Author("Stoyan")]
+        [Property("ManagePassword", 1)]
+        [LogResultToFileAttribute]
         public void ChangePasswordwithoutConfirmedNewPassword()
         {
-            LoginUser user = AccessExcelData.GetTestData("ChangePasswordwithoutConfirmedNewPassword");
+            LoginUser user = AccessExcelData.GetTLoginUserData("ChangePasswordwithoutConfirmedNewPassword");
             LoginPage loginPage = new LoginPage(driver);
             ManagePasswordPage managePage = new ManagePasswordPage(driver);
 

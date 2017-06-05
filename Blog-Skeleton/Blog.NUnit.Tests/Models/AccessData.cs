@@ -24,7 +24,7 @@ namespace Blog.NUnit.Tests.Models
             return con;
         }
 
-        public static LoginUser GetTestData(string keyName)
+        public static LoginUser GetTLoginUserData(string keyName)
         {
             using (var connection = new OleDbConnection(TestDataFileConnection()))
             {

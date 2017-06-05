@@ -42,7 +42,12 @@ namespace Blog.NUnit.Tests.Pages
         protected void Type(IWebElement element, string text)
         {
             element.Clear();
+            if (text == null)
+            {
+                text = "";
+            }
             element.SendKeys(text);
+            
         }
 
         protected void EnterText(IWebElement element, string text)
