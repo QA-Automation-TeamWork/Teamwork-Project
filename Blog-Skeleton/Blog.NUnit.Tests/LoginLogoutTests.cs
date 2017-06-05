@@ -30,8 +30,8 @@ namespace Blog.NUnit.Tests
             LoginUser user = AccessExcelData.GetLoginData("LoginWithRememberMeCheck");
             LoginPage loginPage = new LoginPage(driver);
 
-            loginPage.NavigateTo();
             loginPage.LogOut();
+            loginPage.NavigateTo();
             loginPage.FillCredentialsWithRememberMe(user);
 
             Assert.AreEqual("Hello user1@abv.bg!", loginPage.LoggedUserMessage.Text);

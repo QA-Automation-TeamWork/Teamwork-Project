@@ -157,3 +157,4 @@ D:\SoftUni\TeamProj\Teamwork-Project\Blog-Skeleton\Blog.NUnit.Tests\bin\Debug\We
 D:\SoftUni\TeamProj\Teamwork-Project\Blog-Skeleton\Blog.NUnit.Tests\obj\Debug\Blog.NUnit.Tests.csprojResolveAssemblyReference.cache
 D:\SoftUni\TeamProj\Teamwork-Project\Blog-Skeleton\Blog.NUnit.Tests\obj\Debug\Blog.NUnit.Tests.dll
 D:\SoftUni\TeamProj\Teamwork-Project\Blog-Skeleton\Blog.NUnit.Tests\obj\Debug\Blog.NUnit.Tests.pdb
+D:\MyDocs\Programming\Automation\Teamwork-Project\Blog-Skeleton\Blog.NUnit.Tests\obj\Debug\Blog.NUnit.Tests.csprojResolveAssemblyReference.cache
