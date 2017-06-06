@@ -33,7 +33,7 @@ namespace Blog.NUnit.Tests
             loginPage.NavigateTo();
             loginPage.FillCredentialsWithRememberMe(user);
 
-            Assert.AreEqual("Hello user1@abv.bg!", loginPage.LoggedUserMessage.Text);
+            Assert.AreEqual("Hello abv@abv.bg!", loginPage.LoggedUserMessage.Text);
         }
 
         [Test]

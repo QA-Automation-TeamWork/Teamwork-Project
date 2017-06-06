@@ -41,7 +41,7 @@ namespace Blog.NUnit.Tests.Pages
             }
         }
 
-        /*Displayed message on user, when is logged: Hello user1@abv.bg!*/
+        /*Displayed message on user, when is logged: Hello abv@abv.bg!*/
         public IWebElement LoggedUserMessage
         {
             get
