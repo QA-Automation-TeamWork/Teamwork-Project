@@ -40,5 +40,29 @@ namespace Blog.NUnit.Tests
 
             Assert.IsTrue(driver.Url.Contains("Login"));
         }
+        [Test]
+        public void DeleteArticleWithOutLoggedUser()
+        {
+
+            ArticlePage articlePage = new ArticlePage(driver);
+
+            articlePage.NavigateTo();
+            articlePage.DeleteArticle();
+
+            Assert.IsTrue(driver.Url.Contains("Login"));
+        }
+
+        [Test]
+        public void AccessArticleWithOutLoggedUser()
+        {
+
+            ArticlePage articlePage = new ArticlePage(driver);
+
+            articlePage.NavigateTo();
+            articlePage.Article.Click();
+            
+
+            Assert.AreEqual("demo",articlePage.ArticleHeader.Text);
+        }
     }
 }

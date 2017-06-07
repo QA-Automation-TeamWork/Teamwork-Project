@@ -36,6 +36,16 @@ namespace Blog.NUnit.Tests.Pages.ArticlePage
                 return this.Driver.FindElement(By.XPath("/html/body/div[2]/div/article/footer/a[2]"));
             }
         }
+
+        public IWebElement ArticleHeader
+        {
+            get
+            {
+                return this.Driver.FindElement(By.XPath("/html/body/div[2]/div/article/header/h2"));
+            }
+        }
+
+       
     }
 }
 
